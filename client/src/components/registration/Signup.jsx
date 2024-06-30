@@ -16,6 +16,7 @@ const Signup = () => {
     let currentAnimation = null;
 
     const handleFocus = (id, offset, dasharray) => {
+      console.log(`Focused on: ${id}`); // Debug log
       if (currentAnimation) currentAnimation.pause();
       currentAnimation = anime({
         targets: 'path',
@@ -32,16 +33,16 @@ const Signup = () => {
       });
     };
 
+    document.getElementById('username').addEventListener('focus', () => {
+      handleFocus('username', 0, '240 1386');
+    });
+
     document.getElementById('email').addEventListener('focus', () => {
-      handleFocus('email', 0, '240 1386');
+      handleFocus('email', -336, '240 1386');
     });
 
     document.getElementById('password').addEventListener('focus', () => {
-      handleFocus('password', -336, '240 1386');
-    });
-
-    document.getElementById('submit').addEventListener('focus', () => {
-      handleFocus('submit', -730, '530 1386');
+      handleFocus('password', -675, '220 1386');
     });
 
     return () => {
@@ -77,7 +78,7 @@ const Signup = () => {
             Create an account to manage your tasks efficiently and collaborate seamlessly with your team.
           </div>
         </div>
-        <div className="right">
+        <div className="right" style={{ height: "110%" }}>
           <svg viewBox="0 0 320 300">
             <defs>
               <linearGradient
@@ -125,7 +126,7 @@ const Signup = () => {
                 placeholder="Enter Password"
                 onChange={handleChange}
               />
-              <input type="submit" id="submit" value="Sign Up" />
+              <input type="submit" id="submit" value="Sign up" />
             </form>
           </div>
         </div>
