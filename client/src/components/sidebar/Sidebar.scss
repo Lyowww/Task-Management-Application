@@ -1,0 +1,28 @@
+.sidebar {
+    background-color: rgba(56, 212, 212, 0.481);
+    color: white;
+    height: 100vh;
+    padding: 1rem;
+    max-width: 15vw;
+
+    .list-item {
+        margin: 2rem 0;
+        h5{
+            text-align: center;
+        }
+    }
+
+    .list-item2{
+        margin: 2rem 0;
+        border-bottom: 3px solid rgba(169, 176, 179, 0.491);
+        border-top: 3px solid rgba(169, 176, 179, 0.491);
+        padding-top: 5%;
+        padding-bottom: 5%;
+        text-align: center;
+    }
+
+    .list-item2:hover{
+        background-color: rgba(255, 255, 255, 0.295);
+    }
+
+}
